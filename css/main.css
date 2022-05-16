@@ -139,16 +139,6 @@ header {
     padding-right: 0.5em;
 }
 
-/* .closing-days__title_TODELETE::after {
-    content: ' ';
-    background-color: var(--color-darker-background);
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    right: -5px;
-    transform: rotate(45deg);
-} */
-
 .closing-days__remaining {
     width: 70%;
     height: 32px;
@@ -217,7 +207,6 @@ header {
     height: 300px;
     width: 300px;
     min-width: 300px;
-    background-image: url("../assets/img/kanye_west.jpg");
     background-size: cover;
     color: var(--color-white);
     display: flex;
