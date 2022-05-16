@@ -1,0 +1,420 @@
+:root {
+    --color-green-positive: rgb(60, 187, 180);
+    --color-green-positive-background: rgba(60, 187, 180, 0.4);
+    --color-yellow-negative: rgb(249, 173, 29);
+    --color-yellow-negative-background: rgba(249, 173, 29, 0.4);
+    --color-dark-background: rgba(0, 0, 0, .4);
+    --color-darker-background: rgba(0, 0, 0, .6);
+    --color-darker-gray: rgba(51, 51, 51, 1);
+    --color-dark-gray: rgba(70, 70, 70, 1);
+    --color-light-gray: rgba(235, 235, 235, 1);
+    --color-light-background: rgba(255, 255, 255, .4);
+    --color-lighter-background: rgba(255, 255, 255, .8);
+    --color-white: rgba(255, 255, 255, 1);
+    --sm: 1rem;
+    --md: 1.125rem;
+    --lg: 1.875rem;
+    --xlg: 2.25rem;
+}
+
+html,
+body {
+    width: 100%;
+    margin: 0;
+    background-color: var(--color-white);
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+body {
+    position: relative;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-image: url("../assets/img/pope-francis.png");
+    background-size: cover;
+    background-position: center 25%;
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: hue;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.top-bar-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 1.5em 0.5em;
+
+}
+
+.title {
+    font-size: var(--lg);
+    color: var(--color-white);
+}
+
+.current-ruling-container {
+    width: 100%;
+    display: flex;
+    padding: 0 1em 2em;
+}
+
+.current-ruling-card {
+    background-color: var(--color-dark-background);
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: var(--color-white);
+    font-weight: lighter;
+    font-size: var(--md);
+}
+
+.current-ruling-card__info {
+    padding: 1em;
+    backdrop-filter: blur(15px);
+}
+
+.current-ruling-card__info h1 {
+    margin-bottom: 0.4em;
+}
+
+.current-ruling-card__info-span {
+    margin-top: 1.5em;
+    display: inline-block;
+    font-weight: bold;
+    font-size: var(--sm);
+}
+
+.current-ruling-card__votes {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+}
+
+
+.thumb-up,
+.thumb-down {
+    border: none;
+    width: 50%;
+    padding: 0.7em 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.thumb-up {
+    background-color: var(--color-green-positive);
+}
+
+.thumb-down {
+    background-color: var(--color-yellow-negative);
+}
+
+.closing-days {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    bottom: 0;
+
+}
+
+.closing-days__title {
+    position: relative;
+    height: 32px;
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--color-darker-background);
+    color: var(--color-white);
+    padding-right: 0.5em;
+}
+
+/* .closing-days__title_TODELETE::after {
+    content: ' ';
+    background-color: var(--color-darker-background);
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    right: -5px;
+    transform: rotate(45deg);
+} */
+
+.closing-days__remaining {
+    width: 70%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    background-color: var(--color-light-background);
+    padding-left: 0.5em;
+}
+
+.rule-section {
+    width: 100%;
+    margin-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+
+}
+
+.main-rule-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-light-gray);
+    padding: 1em;
+    font-size: var(--md);
+    color: var(--color-dark-gray);
+
+}
+
+.rule-container {
+    width: 40%;
+    padding-right: 0.2em;
+}
+
+.main-rule-container p {
+    width: 60%;
+}
+
+.rule-container__bold-span {
+    font-size: var(--lg);
+
+}
+
+.main-cards-container {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+
+}
+
+.subtitle {
+    color: var(--color-dark-gray);
+    font-weight: lighter;
+    font-size: var(--lg);
+    margin-bottom: 1em;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    min-width: 300px;
+    background-image: url("../assets/img/kanye_west.jpg");
+    background-size: cover;
+    color: var(--color-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card:not(:first-child) {
+    margin-left: 1em;
+}
+
+.card-info {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.cards-container__celebrity-info {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em 1em 0.2em;
+}
+
+.cards-container__celebrity-info__icons {
+    display: flex;
+    flex-direction: column;
+}
+
+.celebrity-name {
+    font-size: var(--lg);
+    margin-bottom: 1em;
+}
+
+.buttom-thum-down__img {
+    background-color: var(--color-yellow-negative);
+    height: 30px;
+    width: 30px;
+    padding: 0.5em;
+}
+
+.celebrity-description {
+    font-size: var(--md);
+}
+
+.vote-info {
+    text-align: right;
+    font-size: var(--sm);
+    margin: 0.8em 0;
+}
+
+
+.cards-container__buttons {
+    display: flex;
+    justify-content: flex-end;
+    height: 30px;
+}
+
+.buttom-thum-up,
+.buttom-thum-down {
+    height: 100%;
+    width: 30px;
+    border: none;
+}
+
+.buttom-thum-up {
+    background-color: var(--color-green-positive);
+}
+
+.buttom-thum-down {
+    background-color: var(--color-yellow-negative);
+    margin-left: 1em;
+}
+
+.buttom-thumb-active {
+    border: 2px solid var(--color-white);
+}
+
+.buttom-vote-now {
+    height: 100%;
+    width: 80px;
+    border: 1px solid var(--color-white);
+    background-color: var(--color-dark-background);
+    color: var(--color-white);
+    margin-left: 1em;
+}
+
+.buttom-vote-now:disabled {
+    border: 1px solid var(--color-dark-background);
+    background-color: var(--color-white);
+    color: var(--color-dark-background);
+    cursor: not-allowed;
+}
+
+.gauge-bar-container {
+    display: flex;
+    align-items: center;
+
+}
+
+.gauge-bar__thums-up {
+    background-color: var(--color-green-positive-background);
+    padding: 0.5em;
+}
+
+.gauge-bar__thums-down {
+    background-color: var(--color-yellow-negative-background);
+    padding: 0.5em;
+    text-align: right;
+}
+
+.votes-result-info {
+    font-size: 1.4em;
+
+}
+
+.suggest-new-people {
+    height: 132px;
+    padding: 0 1.5em;
+
+}
+
+.suggest-new-people__container {
+    background-image: url("../assets/img/bg-people.png");
+    background-size: cover;
+    background-position: center 57%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: hue;
+}
+
+.suggest-new-people__container span {
+    font-size: var(--lg);
+    color: var(--color-dark-gray);
+    width: 85%;
+    text-align: center;
+    margin-bottom: 0.5em;
+}
+
+.submit-button {
+    background-color: transparent;
+    height: 36px;
+    width: 88%;
+    border: 0.2em solid var(--color-dark-gray);
+    font-size: var(--md);
+}
+
+.final-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 2px dashed var(--color-dark-gray);
+    margin: 1.5em 1.5em 1.5em;
+
+}
+
+.footer-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: space-between;
+    font-size: var(--md);
+}
+
+.footer-info-container span {
+    display: inline-block;
+    margin: .8em 0;
+}
+
+.social-network-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--md);
+}
+
+.social-network-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-network-icons img {
+    width: 24px;
+    margin-left: 0.8em;
+    margin-top: 0.5em;
+}
+
+.main-nav,
+.button-search,
+.display-mode,
+.more-info,
+.close-img {
+    display: none;
+}
